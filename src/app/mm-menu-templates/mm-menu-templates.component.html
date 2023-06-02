@@ -1,0 +1,120 @@
+<div class="column-layout group">
+  <div class="row-layout account-header">
+    <div class="row-layout page-title">
+      <div class="column-layout group_1">
+        <p class="ig-typography__subtitle-1 content">
+          Your Path:
+        </p>
+        <p *ngIf="textVisible" class="ig-typography__body-2 text_1"></p>
+      </div>
+      <a target="_blank" class="ig-typography__body-1 hyperlink">
+        Home
+      </a>
+      <p class="content">
+        &gt;&gt;
+      </p>
+      <a target="_blank" class="ig-typography__body-1 hyperlink">
+        Menu Templates
+      </a>
+    </div>
+  </div>
+</div>
+<div class="row-layout group_2">
+  <div class="column-layout group_3">
+    <div class="column-layout group_4">
+      <div class="row-layout page-title-1">
+        <div class="row-layout group_5">
+          <img src="/assets/tools.svg" class="image" />
+        </div>
+        <div class="column-layout group_6">
+          <h6 class="content">
+            Tools
+          </h6>
+          <p *ngIf="textVisible1" class="ig-typography__body-2 text_1"></p>
+        </div>
+        <div class="row-layout group_7">
+          <div class="column-layout group_8"></div>
+          <button igxButton="raised" igxRipple *ngIf="buttonVisible" [igxToggleAction]="dropdown" class="button">
+            <span>File</span>
+            <igx-icon>
+              keyboard_arrow_down
+            </igx-icon>
+          </button>
+          <button igxButton="outlined" igxRipple class="button_1">
+            <igx-icon>
+              fiber_new
+            </igx-icon>
+            <span>New Template</span>
+          </button>
+          <button igxButton="outlined" igxRipple class="button_2">
+            <igx-icon>
+              touch_app
+            </igx-icon>
+            <span>POS Buttons</span>
+          </button>
+          <button igxButton="outlined" igxRipple class="button_2">
+            <igx-icon>
+              settings
+            </igx-icon>
+            <span>Preferences</span>
+          </button>
+          <button igxButton="outlined" igxRipple class="button_2">
+            <igx-icon>
+              list
+            </igx-icon>
+            <span>Inventory</span>
+          </button>
+          <button igxButton="outlined" igxRipple class="button_2">
+            <igx-icon>
+              store_mall_directory
+            </igx-icon>
+            <span>Restaurants</span>
+          </button>
+          <igx-drop-down #dropdown class="dropdown">
+            <igx-drop-down-item>
+              Option 1
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Option 2
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Option 3
+            </igx-drop-down-item>
+          </igx-drop-down>
+          <igx-drop-down class="dropdown">
+            <igx-drop-down-item>
+              Option 1
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Option 2
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Option 3
+            </igx-drop-down-item>
+          </igx-drop-down>
+        </div>
+      </div>
+    </div>
+    <igx-grid [data]="menuTemplatesTable1" primaryKey="ID" displayDensity="cosy" rowSelection="multiple" [rowEditable]="true" [moving]="true" [allowFiltering]="true" filterMode="quickFilter" height="486px" class="grid">
+      <igx-grid-toolbar>
+        <igx-grid-toolbar-actions>
+          <igx-grid-toolbar-pinning></igx-grid-toolbar-pinning>
+          <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+          <igx-grid-toolbar-exporter></igx-grid-toolbar-exporter>
+        </igx-grid-toolbar-actions>
+        <igx-grid-toolbar-title>Grid Toolbar</igx-grid-toolbar-title>
+      </igx-grid-toolbar>
+      <igx-column field="ID" dataType="number" header="ID" [groupable]="true" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+      <igx-column field="Name" dataType="string" header="Name" [groupable]="true" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+      <igx-column field="Complete" dataType="boolean" header="Complete" [groupable]="true" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+      <igx-column field="Restaurants" dataType="string" header="Restaurants" [groupable]="true" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+      <igx-column field="LastModified" dataType="string" header="LastModified" [groupable]="true" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+      <igx-column field="LastModifiedBy" dataType="string" header="LastModifiedBy" [groupable]="true" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+      <igx-column field="Actions" dataType="string" header="Actions" [groupable]="true" [sortable]="true" [resizable]="true" [selectable]="false"></igx-column>
+      <igx-action-strip>
+        <igx-grid-pinning-actions></igx-grid-pinning-actions>
+        <igx-grid-editing-actions [addRow]="true"></igx-grid-editing-actions>
+      </igx-action-strip>
+    </igx-grid>
+  </div>
+</div>

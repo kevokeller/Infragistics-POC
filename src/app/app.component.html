@@ -1,0 +1,99 @@
+<div class="row-layout group">
+  <div [igxToggleAction]="navDrawer" class="row-layout group_1">
+    <igx-icon class="icon">
+      menu
+    </igx-icon>
+  </div>
+  <img src="/assets/MenuManager_Logo.png" class="image" />
+  <igx-navbar class="navbar">
+    <igx-navbar-title class="navbar-content"></igx-navbar-title>
+    <button igxButton="icon" igxRipple class="button">
+      <igx-icon>
+        search
+      </igx-icon>
+    </button>
+    <button igxButton="icon" igxRipple class="button">
+      <igx-icon>
+        settings
+      </igx-icon>
+    </button>
+    <button igxButton="icon" igxRipple class="button">
+      <igx-icon>
+        notifications_none
+      </igx-icon>
+    </button>
+    <button igxButton="icon" igxRipple class="button">
+      <igx-icon>
+        person
+      </igx-icon>
+    </button>
+  </igx-navbar>
+</div>
+<div class="row-layout group_2">
+  <igx-nav-drawer [pin]="true" [pinThreshold]="900" width="250px" #navDrawer class="nav-drawer">
+    <ng-template igxDrawerMini>
+      <div igxDrawerItem igxRipple routerLink="/mm-home">
+        <igx-icon class="icon_1">
+          home
+        </igx-icon>
+      </div>
+      <div igxDrawerItem igxRipple>
+        <igx-icon class="icon_1">
+          cloud_upload
+        </igx-icon>
+      </div>
+      <div igxDrawerItem igxRipple routerLink="/mm-menu-templates">
+        <igx-icon class="icon_1">
+          file_copy
+        </igx-icon>
+      </div>
+      <div igxDrawerItem igxRipple>
+        <igx-icon class="icon_1">
+          layers
+        </igx-icon>
+      </div>
+      <div igxDrawerItem igxRipple>
+        <igx-icon class="icon_1">
+          monetization_on
+        </igx-icon>
+      </div>
+    </ng-template>
+    <ng-template igxDrawer>
+      <igx-list class="list">
+        <igx-list-item [isHeader]="false" routerLink="/mm-home">
+          <span igxListThumbnail>
+            <igx-avatar icon="home" shape="circle" class="avatar"></igx-avatar>
+          </span>
+          <span igxListLineTitle>Home</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false">
+          <span igxListThumbnail>
+            <igx-avatar icon="cloud_upload" shape="circle" class="avatar"></igx-avatar>
+          </span>
+          <span igxListLineTitle>Menu Publishing</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false" routerLink="/mm-menu-templates">
+          <span igxListThumbnail>
+            <igx-avatar icon="file_copy" shape="circle" class="avatar"></igx-avatar>
+          </span>
+          <span igxListLineTitle>Menu Templates</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false">
+          <span igxListThumbnail>
+            <igx-avatar icon="layers" shape="circle" class="avatar"></igx-avatar>
+          </span>
+          <span igxListLineTitle>Discount Templates</span>
+        </igx-list-item>
+        <igx-list-item [isHeader]="false">
+          <span igxListThumbnail>
+            <igx-avatar icon="monetization_on" shape="circle" class="avatar"></igx-avatar>
+          </span>
+          <span igxListLineTitle>Tax Profiles</span>
+        </igx-list-item>
+      </igx-list>
+    </ng-template>
+  </igx-nav-drawer>
+  <div class="view-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

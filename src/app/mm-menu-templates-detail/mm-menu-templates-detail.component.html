@@ -1,0 +1,148 @@
+<div class="column-layout group">
+  <div class="row-layout account-header">
+    <div class="row-layout page-title">
+      <div class="column-layout group_1">
+        <p class="ig-typography__subtitle-1 content">
+          Your Path:
+        </p>
+        <p *ngIf="textVisible2" class="ig-typography__body-2 text_1"></p>
+      </div>
+      <a target="_blank" class="ig-typography__body-1 hyperlink">
+        Home
+      </a>
+      <p class="content">
+        &gt;&gt;
+      </p>
+      <a target="_blank" class="ig-typography__body-1 hyperlink">
+        Menu Templates
+      </a>
+      <p class="content">
+        &gt;&gt;
+      </p>
+      <a target="_blank" class="ig-typography__body-1 hyperlink">
+        Menu Template Details
+      </a>
+      <p class="content">
+        &gt;&gt;
+      </p>
+      <p class="text_2">
+        37534 Waterbury - Walmart
+      </p>
+    </div>
+  </div>
+</div>
+<div class="row-layout group_2">
+  <div class="column-layout group_3">
+    <div class="column-layout group_4">
+      <div class="row-layout page-title-1">
+        <div class="row-layout group_5">
+          <img src="/assets/tools.svg" class="image" />
+        </div>
+        <div class="column-layout group_6">
+          <h6 class="content">
+            Tools
+          </h6>
+          <p *ngIf="textVisible3" class="ig-typography__body-2 text_1"></p>
+        </div>
+        <div class="row-layout group_7">
+          <div class="column-layout group_8"></div>
+          <button igxButton="raised" igxRipple *ngIf="buttonVisible1" [igxToggleAction]="dropdown1" class="button">
+            <span>File</span>
+            <igx-icon>
+              keyboard_arrow_down
+            </igx-icon>
+          </button>
+          <button igxButton="outlined" igxRipple class="button_1">
+            <igx-icon>
+              fiber_new
+            </igx-icon>
+            <span>New Template</span>
+          </button>
+          <button igxButton="outlined" igxRipple class="button_2">
+            <igx-icon>
+              touch_app
+            </igx-icon>
+            <span>POS Buttons</span>
+          </button>
+          <button igxButton="outlined" igxRipple class="button_2">
+            <igx-icon>
+              settings
+            </igx-icon>
+            <span>Preferences</span>
+          </button>
+          <button igxButton="outlined" igxRipple class="button_2">
+            <igx-icon>
+              list
+            </igx-icon>
+            <span>Inventory</span>
+          </button>
+          <button igxButton="outlined" igxRipple class="button_2">
+            <igx-icon>
+              store_mall_directory
+            </igx-icon>
+            <span>Restaurants</span>
+          </button>
+          <igx-drop-down #dropdown1 class="dropdown">
+            <igx-drop-down-item>
+              Option 1
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Option 2
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Option 3
+            </igx-drop-down-item>
+          </igx-drop-down>
+          <igx-drop-down class="dropdown">
+            <igx-drop-down-item>
+              Option 1
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Option 2
+            </igx-drop-down-item>
+            <igx-drop-down-item>
+              Option 3
+            </igx-drop-down-item>
+          </igx-drop-down>
+        </div>
+      </div>
+    </div>
+    <igx-tabs [disableAnimation]="true" class="tabs">
+      <igx-tab-item [selected]="true" class="tab-item">
+        <igx-tab-header>
+          <span igxTabHeaderLabel>Simplified Pricing</span>
+        </igx-tab-header>
+        <igx-tab-content class="row-layout tab-item-content"></igx-tab-content>
+      </igx-tab-item>
+      <igx-tab-item class="tab-item">
+        <igx-tab-header>
+          <span igxTabHeaderLabel>Product View</span>
+        </igx-tab-header>
+        <igx-tab-content class="row-layout tab-item-content"></igx-tab-content>
+      </igx-tab-item>
+    </igx-tabs>
+    <igx-grid [data]="menuTemplateDetailTable1" primaryKey="Flavor" displayDensity="cosy" rowSelection="multiple" [rowEditable]="true" [moving]="true" columnSelection="multiple" [allowFiltering]="true" filterMode="quickFilter" height="439px" class="grid">
+      <igx-grid-toolbar>
+        <igx-grid-toolbar-actions>
+          <igx-grid-toolbar-pinning></igx-grid-toolbar-pinning>
+          <igx-grid-toolbar-hiding></igx-grid-toolbar-hiding>
+          <igx-grid-toolbar-exporter></igx-grid-toolbar-exporter>
+        </igx-grid-toolbar-actions>
+        <igx-grid-toolbar-title>Grid Toolbar</igx-grid-toolbar-title>
+      </igx-grid-toolbar>
+      <igx-column field="Flavor" dataType="string" header="Flavor" [groupable]="true" [sortable]="true" [resizable]="true" routerLink="/mm-menu-templates-detail"></igx-column>
+      <igx-column field="Core/Optional" dataType="string" header="Core/Optional" [groupable]="true" [sortable]="true" [resizable]="true"></igx-column>
+      <igx-column field="RecoPrice" dataType="number" header="RecoPrice" [groupable]="true" [sortable]="true" [resizable]="true"></igx-column>
+      <igx-column field="In-RestPrice" dataType="number" header="In-RestPrice" [groupable]="true" [sortable]="true" [resizable]="true"></igx-column>
+      <igx-column field="Variance" dataType="number" header="Variance" [groupable]="true" [sortable]="true" [resizable]="true"></igx-column>
+      <igx-column field="RecoPrice1" dataType="number" header="RecoPrice1" [groupable]="true" [sortable]="true" [resizable]="true"></igx-column>
+      <igx-column field="In-RestPrice1" dataType="number" header="In-RestPrice1" [groupable]="true" [sortable]="true" [resizable]="true"></igx-column>
+      <igx-column field="Variance1" dataType="number" header="Variance1" [groupable]="true" [sortable]="true" [resizable]="true"></igx-column>
+      <igx-column field="Actions" dataType="string" header="Actions" [groupable]="true" [sortable]="true" [resizable]="true"></igx-column>
+      <igx-action-strip>
+        <igx-grid-pinning-actions></igx-grid-pinning-actions>
+        <igx-grid-editing-actions [addRow]="true"></igx-grid-editing-actions>
+      </igx-action-strip>
+    </igx-grid>
+  </div>
+</div>
